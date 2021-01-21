@@ -87,8 +87,10 @@ public class Main {
                     contactManager.findContact(phoneNumber3);
                     break;
                 case 6:
+                    contactManager.readToFile();
                     break;
                 case 7:
+                    contactManager.writeToFile();
                     break;
                 case 0:
                     System.exit(0);

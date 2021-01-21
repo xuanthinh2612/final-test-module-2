@@ -1,6 +1,7 @@
 package controller;
 
 import model.Contact;
+import model.ReaderWriterCSV;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -86,19 +87,11 @@ public class ContactManager {
     }
 
     public void writeToFile(){
-        File file = new File(FILE_PATH);
-        try {
-            FileWriter fileWriter = new FileWriter(file);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-
-            while ()
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ReaderWriterCSV.writeFile(contactList);
 
     }
     public void readToFile(){
-
+        contactList = ReaderWriterCSV.readFile();
     }
 
 
